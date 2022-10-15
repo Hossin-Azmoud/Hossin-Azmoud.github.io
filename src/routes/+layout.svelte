@@ -4,10 +4,6 @@
 	import Footer from '$lib/components/Footer.svelte';
 	import './styles.css';
 
-	// import ArtImage from '$lib/images/illustrations/art/importer_.svelte';
-
-	// import { onMount } from "svelte";
-
 </script>
 
 <div class="app reveal w-11/12 lg:w-[900px] md:w-11/12 sm:w-11/12 flex flex-col items-center justify-center p-0 m-0 poppins">
@@ -20,8 +16,6 @@
 
 	<Footer />
 	
-
-	<!-- <ArtImage width="100"/> -->
 </div>
 
 <style lang="css">

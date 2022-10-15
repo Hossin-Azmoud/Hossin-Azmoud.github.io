@@ -1,3 +1,11 @@
+
+<!-- TODO:
+	[$] conact.
+	[] Footer.
+	[] Loader.
+	[] Form validation and backend.
+ -->
+
 <script>
 	import ArtSection from '$lib/components/ArtSection.svelte';
 	import ExpSection from '$lib/components/ExpSection.svelte';
