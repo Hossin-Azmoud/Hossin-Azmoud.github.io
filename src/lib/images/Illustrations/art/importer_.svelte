@@ -53,9 +53,9 @@
 </script>
 
 {#if index != "ALL"}
-	<img src={GetImage(index)} {...$$restProps}/>
+	<img src={GetImage(index)} alt="art" {...$$restProps}/>
 {:else}
 	{#each SVGs as IMG}
-		<img src={IMG} {...$$restProps}/>
+		<img src={IMG}  alt="art" {...$$restProps}/>
 	{/each}
 {/if}

@@ -38,9 +38,14 @@ This file is a global file which is used in the entire app, anything modified he
 	box-shadow: -34px 23px 116px 42px rgba(0, 0, 170, 0.5);
 }
 
+.bttt:hover {
+	box-shadow: -34px 23px 116px 42px rgba(0, 0, 170, 0.5);
+}
 
 
-
+.shadow-c {
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
 
 /* Animations */
 
