@@ -7,42 +7,12 @@
 	import SectionContainer from "$lib/components/MicroComps/SectionContainer.svelte";
 	import Form from "$lib/components/Form.svelte";
 	import {faSmileBeam} from '@fortawesome/free-solid-svg-icons';
-
-	const cp = (T) => {
- 		if ('clipboard' in navigator) {
-			return navigator.clipboard.writeText(T);
-		} else {
-			return document.execCommand('copy', true, T);
-		}
- 	}
-
- 	const Notify = (x, y) => {
- 		const E = document.createElement("p");
- 		E.setAttribute("class", "fixed text-sm font-semibold bg-transparent p-2 ShowBottom rounded-md text-green-400 transition");
- 		
- 		E.style.top = `${y - 40}px`;
- 		E.style.left = `${x + 20}px`;
- 		E.textContent = "Coppied";
- 		document.body.appendChild(E);
- 		
- 		setTimeout(() => {
-
- 			E.style.transform = "translateY(-10px)";
- 			E.style.opacity = "0";
- 			
- 			setTimeout(() => {
- 				document.body.removeChild(E);
- 			}, 2000);
- 			
- 		}, 2000);
- 	}
-
+	import { Notify, cp } from '$lib/components/FuncLib.js';
+	
  	const CopyInfo = (e) =>{
  		cp(e.target.textContent);
- 		Notify(e.clientX, e.clientY);
+ 		Notify("Coppied!", e.clientX, e.clientY);
  	}
-
-
 
 </script>
 

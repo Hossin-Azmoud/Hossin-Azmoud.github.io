@@ -49,6 +49,8 @@
 </script>
 
 <script>
+
+
 	export let index = 0;
 </script>
 
@@ -56,6 +58,6 @@
 	<img src={GetImage(index)} alt="art" {...$$restProps}/>
 {:else}
 	{#each SVGs as IMG}
-		<img src={IMG}  alt="art" {...$$restProps}/>
+		<img src={IMG} alt="art" {...$$restProps}/>
 	{/each}
 {/if}

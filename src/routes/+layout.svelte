@@ -1,10 +1,13 @@
 <script>
 	import Header from '$lib/components/Header.svelte';
-
 	import Footer from '$lib/components/Footer.svelte';
 	import './styles.css';
 
+	
+
 </script>
+
+
 
 <div class="app reveal w-11/12 lg:w-[900px] md:w-11/12 sm:w-11/12 flex flex-col items-center justify-center p-0 m-0 poppins">
 	
@@ -15,7 +18,7 @@
 	</main>
 
 	<Footer />
-	
+		
 </div>
 
 <style lang="css">

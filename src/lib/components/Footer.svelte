@@ -1,4 +1,5 @@
 <script>
+
 	import { page } from '$app/stores';
 	import logo from '$lib/icons/brands/Logo.svg';
 	import Fa from "svelte-fa";
@@ -6,11 +7,10 @@
 	import { faEnvelope, faFaceSmileWink } from '@fortawesome/free-solid-svg-icons';
 	import { EffectNavButtons } from "./FuncLib.js";
 
-
 </script>
 
-<footer class="w-screen bg-slate-800 shadow-2xl flex justify-between items-start flex-row flex-wrap px-6 py-10">
-	 <img alt="Logo" src={logo} width="90" class="my-4">
+<footer class="w-screen bg-slate-800 shadow-2xl flex justify-between items-start flex-col sm:flex-row flex-wrap px-6 py-10">
+	 <img alt="Logo" src={logo} width="70" class="my-4">
 	 
 	 <ul class="my-4">
 	 	
@@ -58,12 +58,12 @@
 			<div class="h-[4px] w-[50px] bg-green-400 rounded-md"></div> </h1> 
 		</li>
 	 	<li>
-	 		<h2 class="text-white w-full text-lg"> 
+	 		<h2 class="text-white font-thin w-full text-lg"> 
 				+212 637-703384
 			</h2>
 		</li>
 	 	<li>
-	 		<h2 class="text-white w-full text-lg"> 
+	 		<h2 class="text-white font-thin w-full text-lg"> 
 			azmoudhossin0101@gmail.com 
 			</h2>
 	 	</li>

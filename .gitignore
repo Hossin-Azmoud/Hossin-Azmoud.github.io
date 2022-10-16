@@ -10,3 +10,4 @@ node_modules
 .output
 backEnd/
 .netlify/
+API/

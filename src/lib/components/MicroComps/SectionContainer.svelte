@@ -1,7 +1,11 @@
 <script lang="js">
 	import Fa from "svelte-fa";
+	
 	export let title;
 	export let icon = "";
+	
+	
+
 </script>
 
 <div class="p-0 flex flex-col flex-wrap justify-center items-center py-4">
