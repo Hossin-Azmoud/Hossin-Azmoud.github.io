@@ -19,8 +19,7 @@ jobs:
           node-version: 14 # You can specify the Node.js version you need.
 
       - name: Install dependencies
-        run: npm config set legacy-peer-deps true
-        run: npm install
+        run: npm config set legacy-peer-deps true && npm install
 
       - name: Build
         env:
