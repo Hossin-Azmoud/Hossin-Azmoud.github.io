@@ -5,7 +5,7 @@
 
 </script>
 
-<button class="py-2 px-6 rounded {Class}" {...$$restProps}>
+<button class="py-2 rounded {Class}" {...$$restProps}>
 	{#if Title}
 		{ Title }
 	{/if}

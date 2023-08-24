@@ -1,4 +1,4 @@
-<script lang="javascript">
+<!-- <script lang="javascript">
 	import FancyIn from './MicroComps/FancyInput.svelte';
 	import FancyButton from './MicroComps/FancyButton.svelte';
 	import SectionContainer from './MicroComps/SectionContainer.svelte';
@@ -104,21 +104,14 @@
 		
 		<FancyButton 
 			Title="submit" 
-			Class="bg-blue-400 hover:bg-blue-300 hover:shadow-md text-white" 
+			Class="bg-blue-400 hover:bg-blue-300 hover:shadow-md text-white p-2" 
 		/>
 
 	</form>
 
-	<Art index="0" class="hidden sm:block transition" width="200"/>
-
-</div>
-
-
-
-
-
-
-
-
-
-
+	<Art 
+		index="0" 
+		class="hidden sm:block transition" 
+		width="200"
+	/>
+</div> -->

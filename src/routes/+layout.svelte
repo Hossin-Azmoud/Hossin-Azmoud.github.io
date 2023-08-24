@@ -7,16 +7,12 @@
 
 </script>
 
-
-
-<div class="app reveal w-11/12 lg:w-[900px] md:w-11/12 sm:w-11/12 flex flex-col items-center justify-center p-0 m-0 poppins">
+<div class="app reveal w-11/12 lg:w-[1100px] md:w-11/12 sm:w-11/12 flex flex-col items-center justify-center p-0 m-0 poppins">
 	
 	<Header />
-
 	<main class="w-full m-0 p-0">
 		<slot />
 	</main>
-
 	<Footer />
 		
 </div>

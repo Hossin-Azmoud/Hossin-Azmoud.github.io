@@ -12,7 +12,6 @@
 		ShowNav = !ShowNav;
 		if(e) EffectNavButtons(e.target);
 	}
-
 </script>
 
 <header class="text-white flex items-center justify-between p-2 w-full">
@@ -20,7 +19,7 @@
 	<div class="corner">
 		<span class:active={$page.url.pathname === '/'}>
 			<a href="/">
-				<img src={logo} alt="SvelteKit" width="40"/>
+				<img src={logo} alt="SvelteKit" width="36"/>
 			</a>
 		</span>
 	</div>
@@ -28,10 +27,9 @@
 	<!-- for desktop -->
 	<nav class="hidden sm:flex items-center justify-center ">
 		<ul class="flex items-center justify-center">
-			<li class="mx-2 flex justify-center items-center flex-col" class:active={$page.url.pathname === '/'}>
+			<li class="text-sm mx-2 flex justify-center items-center flex-col" class:active={$page.url.pathname === '/'}>
 				<a on:click={EffectNavButtons} on:keydown={EffectNavButtons}  class="LINK BTT hover:text-blue-400" href="/">Home</a>
 			</li>
-
 			<li class="mx-2 flex justify-center items-center flex-col" class:active={$page.url.pathname === '/about'}>
 				<a on:click={EffectNavButtons} on:keydown={EffectNavButtons}  class="LINK BTT hover:text-blue-400" href="/about">About</a>
 
@@ -40,24 +38,21 @@
 				<a on:click={EffectNavButtons} on:keydown={EffectNavButtons}  class="LINK BTT hover:text-blue-400" href="/contact">contact</a>
 			</li>
 		</ul>
+		<!-- for desktop -->
+		<nav class="hidden sm:flex items-center justify-center">	 
+			<a class="jump mx-3" target="blank_" href="https://github.com/Moody0101-X">
+				<Fa icon={faGithub} size="1x" color="white"/>
+			</a>
+			<a class="jump mx-3" target="blank_" href="mailto:azmoudhossin0101@gmail.com">
+				<Fa icon={faEnvelope} size="1x" color="white"/>
+			</a>
+			<a class="jump mx-3" target="blank_" href="https://twitter.com/Moody010111">
+				<Fa icon={faTwitter} size="1x" color="white"/>
+			</a>
+		</nav>
 	</nav>
 	
-	<!-- for desktop -->
-	<nav class="hidden sm:flex items-center justify-center">	 
-		
-		<a class="jump mx-3" target="blank_" href="https://github.com/Moody0101-X">
-			<Fa icon={faGithub} size="2x" color="white"/>
-		</a>
 
-		<a class="jump mx-3" target="blank_" href="mailto:azmoudhossin0101@gmail.com">
-			<Fa icon={faEnvelope} size="2x" color="white"/>
-		</a>
-
-		<a class="jump mx-3" target="blank_" href="https://twitter.com/Moody010111">
-			<Fa icon={faTwitter} size="2x" color="white"/>
-		</a>
-
-	</nav>
 
 	<!-- for Mobile -->
 	<button 
