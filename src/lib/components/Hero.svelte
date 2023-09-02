@@ -1,9 +1,9 @@
 <script lang="javascript">
-	import Hero from '$lib/images/Illustrations/hero/Hero.svg';
-	import { page } from '$app/stores';
+	import Hero from '../images/Illustrations/hero/Hero.svg';
 	import Fa from 'svelte-fa';
+	import {link as Link} from 'svelte-spa-router'
 	import { faDownload } from '@fortawesome/free-solid-svg-icons'
-	import FancyButton from '$lib/components/MicroComps/FancyButton.svelte';
+	import FancyButton from './MicroComps/FancyButton.svelte';
 	import Terminal from './Terminal/Terminal.svelte';
 </script>
 
@@ -24,14 +24,13 @@
 
 		<div class="flex justify-start items-center flex-col sm:flex-row my-3 gap-2">
 			<FancyButton Class="p-2 text-white text-sm bg-green-500 hover:bg-green-400">
-				<a class:active={$page.url.pathname === '/'} href="/">
+				<a href="/">
 					Get in touch!
 				</a>
 			</FancyButton>
 
 			<FancyButton Class="p-2 border gap-4 border-white flex items-center justify-between flex-row text-white">
-				<a href="/contact" class="text-sm"
-				 class:active={$page.url.pathname === '/contact'}> 
+				<a href="/contact" use:Link class="text-sm"> 
 					Resume
 				</a>
 				<Fa icon={ faDownload } size="sm" color="white" />

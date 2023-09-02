@@ -1,7 +1,7 @@
 <script>
-
     import TerminalData from './TerminalData'
-    export let close = null;
+
+	export let close = null;
     let wellcome = TerminalData.startupScreenData;
     let inputRef;
     let HistoryLen = 0;

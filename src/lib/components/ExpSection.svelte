@@ -2,7 +2,6 @@
 	import SectionContainer from './MicroComps/SectionContainer.svelte';
 	import { Experience } from './Data/var';
 	import Fa from 'svelte-fa';
-
 </script>
 
 
@@ -26,8 +25,6 @@
 						/>
 					{/each}	
 				</div>
-				
-
 			</div>
 
 		{/each}	

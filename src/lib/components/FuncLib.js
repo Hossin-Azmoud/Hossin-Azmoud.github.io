@@ -1,7 +1,3 @@
-
-
-
-
 const getLinks = () => [...document.getElementsByClassName('LINK')];
 const isEmpty = (s) => s.length === 0;
 const isEmail = (s) => (s.includes("@"));
@@ -15,9 +11,6 @@ const cp = (T) => {
 		return document.execCommand('copy', true, T)
 	}
 };
-
-
-
 
 async function PostToApi(API, data) {
   	
@@ -33,8 +26,6 @@ async function PostToApi(API, data) {
 	    },
 	    body: JSON.stringify(data) 
   	});
-
-
 
 	return response;
 }

@@ -1,5 +1,5 @@
 <script lang="javascript">
-	import ArtSquareImage from '$lib/images/Illustrations/art/importer_.svelte';
+	import ArtSquareImage from '../images/Illustrations/art/importer_.svelte';
 	import SectionContainer from './MicroComps/SectionContainer.svelte';
 	import Form from './Form.svelte'
 
