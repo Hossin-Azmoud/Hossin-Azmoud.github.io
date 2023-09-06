@@ -8,7 +8,7 @@
 	import { EffectNavButtons } from "./FuncLib.js";
 </script>
 
-<footer class="w-screen bg-slate-800 shadow-2xl flex justify-between sm:iterms-center sm:justify-center sm:gap-10 items-start flex-col gap-2 sm:flex-row flex-wrap p-6">
+<footer class="w-full shadow-2xl flex justify-between sm:iterms-center sm:justify-center sm:gap-10 items-start flex-col gap-2 sm:flex-row flex-wrap p-6 bg-black rounded-md border border-green-400 shadow-xl mb-1">
 	<img alt="Logo" src={logo} width="40">
 	<ul>
 	 	<li> 

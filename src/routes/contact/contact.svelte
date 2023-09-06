@@ -3,7 +3,7 @@
 	<meta name="description" content="contact" />
 </svelte:head>
 
-<script lang="javascript">
+<script>
 	import SectionContainer from "../../lib/components/MicroComps/SectionContainer.svelte";
 	import Form from "../../lib/components/Form.svelte";
 	import {faSmileBeam} from '@fortawesome/free-solid-svg-icons';

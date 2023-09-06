@@ -1,8 +1,6 @@
-<script lang="javascript">
+<script>
 	import ArtSquareImage from '../images/Illustrations/art/importer_.svelte';
 	import SectionContainer from './MicroComps/SectionContainer.svelte';
-	import Form from './Form.svelte'
-
 </script>
 
 <SectionContainer title="My Art">

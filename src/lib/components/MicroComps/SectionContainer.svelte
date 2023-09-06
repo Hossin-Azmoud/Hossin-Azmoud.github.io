@@ -1,4 +1,4 @@
-<script lang="js">
+<script>
 	import Fa from "svelte-fa";
 	export let title;
 	export let icon = "";

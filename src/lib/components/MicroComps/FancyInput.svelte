@@ -1,9 +1,9 @@
 <script lang="js">
+	export let onInput = () => {};
 	export let T;
 	export let value;
 	export let name;
 	export let label;
-	export let onInput;
 	export let Class;
 </script>
 
