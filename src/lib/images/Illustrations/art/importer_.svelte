@@ -1,8 +1,13 @@
 
 
-<script lang="javascript" context="module">
+<script context="module">
 	
 	var SVGs = [];
+	// for (let i < 0; i < 21; ++i) {
+	// 	import img from {$'./ART${i}_1.svg'};
+	// 	SVGs.push(img);
+	// }
+
 	import img0 from './ART0_1.svg';
 	import img1 from './ART1_1.svg';
 	import img2 from './ART2.svg';
@@ -42,15 +47,15 @@
 	SVGs.push(img20);
 
 	const GetImage = (i) => {
-		if(SVGs[i]) return SVGs[i];
-		else return SVGs[0];
+		if (i < SVGs.length) {
+			return SVGs[0];
+		}
+		alert("Image loader error!");
 	}
 
 </script>
 
 <script>
-
-
 	export let index = 0;
 </script>
 

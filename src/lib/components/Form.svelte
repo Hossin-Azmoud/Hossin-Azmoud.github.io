@@ -98,7 +98,7 @@ print(post(hook, data=data).content)
 </script>
 
 <SectionContainer title="contact">
-	<div class="flex flex-col md:flex-row items-center justify-between">
+	<div class="flex flex-col md:flex-row items-center justify-between w-full">
 		<form 
 			class="flex w-full sm:w-[700px] justify-between items-start flex-col p-5" 
 			on:submit={submit}

@@ -4,7 +4,7 @@
 	export let icon = "";
 </script>
 
-<div class="min-h-[90vh] p-0 flex flex-col flex-wrap justify-center items-center py-4">
+<div class="min-h-[90vh] p-0 flex flex-col flex-wrap justify-center items-center py-4 w-full">
 	<div class="flex flex-col justify-center items-center my-6 p-1">
 		<h1 class="text-white flex justify-between items-center text-2xl font-semibold"> 
 			{title} 

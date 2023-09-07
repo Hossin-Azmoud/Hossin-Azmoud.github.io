@@ -1,4 +1,4 @@
-<script lang="javascript">
+<script>
 	import Hero from '../images/Illustrations/hero/Hero.svg';
 	import Fa from 'svelte-fa';
 	import {link as Link} from 'svelte-spa-router'
@@ -24,13 +24,13 @@
 
 		<div class="flex justify-start items-center flex-col sm:flex-row my-3 gap-2">
 			<FancyButton Class="p-2 text-white text-sm bg-green-500 hover:bg-green-400">
-				<a href="/">
+				<a href="/contact" use:Link>
 					Get in touch!
 				</a>
 			</FancyButton>
 
 			<FancyButton Class="p-2 border gap-4 border-white flex items-center justify-between flex-row text-white">
-				<a href="/contact" use:Link class="text-sm"> 
+				<a href="/" use:Link class="text-sm"> 
 					Resume
 				</a>
 				<Fa icon={ faDownload } size="sm" color="white" />
