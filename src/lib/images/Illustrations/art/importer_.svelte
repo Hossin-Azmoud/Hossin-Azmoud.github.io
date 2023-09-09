@@ -1,68 +1,65 @@
+<script>
+	import { GetImage, SVGs } from './Loader.js';
+	import { faAngleDoubleLeft, faAngleDoubleRight, faTimes } from '@fortawesome/free-solid-svg-icons';
+	import Fa from 'svelte-fa';
 
+	export let index = 0;
+	let ImageIndex = undefined;
 
-<script context="module">
-	
-	var SVGs = [];
-	// for (let i < 0; i < 21; ++i) {
-	// 	import img from {$'./ART${i}_1.svg'};
-	// 	SVGs.push(img);
-	// }
-
-	import img0 from './ART0_1.svg';
-	import img1 from './ART1_1.svg';
-	import img2 from './ART2.svg';
-	import img3 from './ART3_1.svg';
-	import img5 from './ART5_1.svg';
-	import img6 from './ART6_1.svg';
-	import img7 from './ART7_1.svg';
-	import img8 from './ART8_1.svg';
-	import img9 from './ART9_1.svg';
-	import img10 from './ART10_1.svg';
-	import img11 from './ART11_1.svg';
-	import img12 from './ART12_1.svg';
-	import img13 from './ART13_1.svg';
-	import img14 from './ART14_1.svg';
-	import img15 from './ART15_1.svg';
-	import img16 from './ART16_1.svg';
-	import img19 from './ART19_1.svg';
-	import img20 from './ART20_1.svg';
-	
-	SVGs.push(img0);
-	SVGs.push(img1);
-	SVGs.push(img2);
-	SVGs.push(img3);
-	SVGs.push(img5);
-	SVGs.push(img6);
-	SVGs.push(img7);
-	SVGs.push(img8);
-	SVGs.push(img9);
-	SVGs.push(img10);
-	SVGs.push(img11);
-	SVGs.push(img12);
-	SVGs.push(img13);
-	SVGs.push(img14);
-	SVGs.push(img15);
-	SVGs.push(img16);
-	SVGs.push(img19);
-	SVGs.push(img20);
-
-	const GetImage = (i) => {
-		if (i < SVGs.length) {
-			return SVGs[0];
+	const setImage = (i) => {
+		return () => {
+			ImageIndex = i;
 		}
-		alert("Image loader error!");
+	}
+
+	const unsetImage = () => {
+		ImageIndex = undefined;
+	}
+
+	const nextImage = () => {
+		if (ImageIndex + 1 < SVGs.length) {
+			ImageIndex++;
+		}
+
+	}
+
+	const prevImage = () => {
+		if (ImageIndex > 0) {
+			ImageIndex--;
+		}
 	}
 
 </script>
 
-<script>
-	export let index = 0;
-</script>
-
 {#if index != "ALL"}
-	<img src={GetImage(index)} alt="art" {...$$restProps}/>
+	<img on:click={ setImage(index) } src={GetImage(index)} alt="art" {...$$restProps}/>
 {:else}
-	{#each SVGs as IMG}
-		<img src={IMG} alt="art" {...$$restProps}/>
+	{#each SVGs as img, idx}
+		<img on:click={ setImage(idx) } src={ img } alt="art" {...$$restProps}/>
 	{/each}
+{/if}
+
+{#if ImageIndex != undefined}
+	<div on:click={ unsetImage } class="fixed w-screen h-screen top-0 left-0 bg-black opacity-50">
+	</div>
+	<div class="flex flex-col items-center w-screen justify-content fixed z-50 opacity-100 left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 gap-4 opacity-100">
+		<img
+			src={ GetImage(ImageIndex) }
+			alt="art"
+			class="rounded-md md:w-[500px] w-full p-6 transition duration-200 ease-in-out"
+		/>
+		<div class="flex flex-row items-center justify-content gap-8">
+			<button on:click={ prevImage } class="bg-white cursor-pointer p-2 rounded-md">
+				<Fa icon={ faAngleDoubleLeft } size="1x" color="#000000" />
+			</button>
+			<button on:click={ nextImage } class="bg-white cursor-pointer p-2 rounded-md">
+				<Fa icon={ faAngleDoubleRight } size="1x" color="#000000"/>
+			</button>
+
+			<button on:click={ unsetImage } class="bg-slate-800 cursor-pointer p-2 rounded-md">
+				<Fa icon={ faTimes } size="1x" color="#FFFFFF"/>
+			</button>
+
+		</div>
+	</div>
 {/if}

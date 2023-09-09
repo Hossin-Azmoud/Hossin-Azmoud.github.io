@@ -8,32 +8,26 @@
 </script>
 
 <section class="flex-col justify-center sm:flex-row flex sm:justify-between items-center w-full p-1 h-[90vh]">
-	<div class="w-full sm:w-1/2 flex flex-col sm:block justify-center items-center">
-		<h1   class="text-2xl text-white my-1 font-semibold"> 
-		<span class="text-green-300">Full-stack</span> developer 
+	<div class="w-full sm:w-1/2 flex flex-col sm:block justify-center items-center gap-4">
+		<h1 class="text-2xl text-white font-semibold"> 
+		<span class="text-green-300">Front-End</span> developer 
 		</h1>
-		<h1 class="text-2xl text-white my-1"> 
-		Python enthusiast
-		</h1>
-		<p class="text-base text-white mt-4 font-normal text-center sm:text-left"> 
-			I build high
-			quality degital
-			products, I deliver clean, understandable code, I also make some
-			Art from time to time.
+		
+		<p class="text-xl text-white mt-4 font-normal text-center sm:text-left"> 
+			I am into making things look beautiful, interactive, fluid and safe.
 		</p>
 
 		<div class="flex justify-start items-center flex-col sm:flex-row my-3 gap-2">
-			<FancyButton Class="p-2 text-white text-sm bg-green-500 hover:bg-green-400">
+			<FancyButton Class="py-3 px-6 text-white text-base bg-green-600">
 				<a href="/contact" use:Link>
 					Get in touch!
 				</a>
 			</FancyButton>
-
-			<FancyButton Class="p-2 border gap-4 border-white flex items-center justify-between flex-row text-white">
-				<a href="/" use:Link class="text-sm"> 
+			<FancyButton Class="py-3 px-6 gap-4 flex items-center justify-between flex-row text-white bg-slate-800">
+				<a href="/" use:Link class="text-base"> 
 					Resume
 				</a>
-				<Fa icon={ faDownload } size="sm" color="white" />
+				<Fa icon={ faDownload } size="md" color="white" />
 			</FancyButton>
 			<Terminal />
 		</div>

@@ -1,24 +1,26 @@
 <script>
-    import GlowButton from '../MicroComps/GlowButton.svelte';
+    import FancyButton from '../MicroComps/FancyButton.svelte';
     import FloatingShell from './FloatingShell.svelte';
     import Fa from 'svelte-fa';
     import { faTerminal } from '@fortawesome/free-solid-svg-icons'
-    let isOpen = false;
 
+	let isOpen = false;
     const toggleTermState = (e) => {
 		if (e != undefined && e != null)
 			e.preventDefault();
-        console.log("Hello word!");
 		isOpen = !isOpen;
 	}
 
 </script>
 
 <div>
-    <GlowButton onclick={ toggleTermState } title="open a web command line"> 
-        <Fa icon={ faTerminal } color="white"/>
-    </GlowButton>
-
+	<FancyButton onclick={ toggleTermState } Class="py-4 px-6 
+		flex items-center justify-between 
+		flex-row text-white 
+		bg-slate-800
+	">
+		<Fa icon={ faTerminal } size="md" color="white"/>
+	</FancyButton>
     {#if (isOpen)}
         <FloatingShell close={ toggleTermState } />
     {/if}

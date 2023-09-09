@@ -1,5 +1,5 @@
 <script>
-    import TerminalData from './TerminalData'
+    import TerminalData from '../Data/TerminalData'
 
 	export let close = null;
     let wellcome = TerminalData.startupScreenData;

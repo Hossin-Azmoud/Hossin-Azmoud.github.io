@@ -11,8 +11,6 @@
 			return document.execCommand('copy', true, T);
 		}
  	}
-
-
 </script>
 
 <div class="flex flex-col rounded shadow-2xl items-center justify-center my-4 p-4 transition-all w-full bg-white">

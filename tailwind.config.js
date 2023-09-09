@@ -1,6 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 const tailwindConfig = {
-  content: ["./src/**/*.{html,js,svelte}", "./*.html"],
+  mode:'jit',
+  content: [
+		"./src/**/*.{html,js,svelte}", 
+		"./*.html",
+		"./src/lib/**/*.svelte"
+  ],
   theme: {
     extend: {},
   },

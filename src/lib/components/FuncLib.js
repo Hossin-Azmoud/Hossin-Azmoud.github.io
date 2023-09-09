@@ -52,9 +52,7 @@ const Notify = (Text, x, y) => {
 }
 
 const EffectNavButtons = (target) => {
-		
 	const EL = (target.target) ? target.target : target;
-
 	if(EL){
 		getLinks().map((v) => {
 			if(v === EL) {
@@ -68,7 +66,7 @@ const EffectNavButtons = (target) => {
 		});
 	}
 }
-	
+
 export { 
 	EffectNavButtons, 
 	isEmpty, 
