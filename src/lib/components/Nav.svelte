@@ -1,37 +1,37 @@
 <script>
-	import { Link } from "svelte-navigator";
+	
+	import { link as Link } from 'svelte-spa-router'
 	import logo from '../icons/brands/Logo.svg';
 	import Fa from 'svelte-fa';
 	import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 	import { EffectNavButtons } from "./FuncLib.js";
-	import MobileNav from './Mobile/MobileNav.svelte'
-	
+	import MobileNav from './Mobile/MobileNav.svelte'	
 </script>
 
 <header class="text-white flex items-center justify-between px-4 py-4 w-full bg-slate-800 rounded-md my-4 shadow">
 	<div class="corner">
-		<Link to="/">
+		<a href="/" use:Link>
 			<img src={ logo } alt="Logo!" width="36"/>
-		</Link>
+		</a>
 	</div>
 	<!-- for desktop -->
 	<nav class="hidden sm:flex items-center justify-center gap-8">
 		<ul class="flex items-center justify-center">
 			<li class="text-sm mx-2 flex justify-center items-center flex-col">
-				<Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" to="/" >
+				<a use:Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" href="/" >
 					Home
-				</Link>
+				</a>
 			</li>
 			<li class="mx-2 flex justify-center items-center flex-col">
-				<Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" to="/about" >
+				<a use:Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" href="/about" >
 					About
-				</Link>
+				</a>
 			</li>
 			<li class="mx-2 flex justify-center items-center flex-col">
-				<Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" to="/contact" >
+				<a use:Link on:click={(z) => EffectNavButtons(z)} on:keydown={(z) => EffectNavButtons(z)}  class="LINK BTT hover:text-blue-400" href="/contact" >
 					contact
-				</Link>
+				</a>
 			</li>
 		</ul>
 

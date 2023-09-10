@@ -22,7 +22,6 @@
     "@fortawesome/free-brands-svg-icons": "^6.4.2",
     "@fortawesome/free-regular-svg-icons": "^6.4.2",
     "@fortawesome/free-solid-svg-icons": "^6.4.2",
-    "svelte-navigator": "^3.2.2",
     "svelte-spa-router": "^3.3.0"
   }
 }

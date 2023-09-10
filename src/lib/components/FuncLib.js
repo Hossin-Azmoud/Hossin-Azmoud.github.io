@@ -52,20 +52,18 @@ const Notify = (Text, x, y) => {
 }
 
 const EffectNavButtons = (e) => {
-	const EL    = e.detail;
+	const target    = (e.target) ? (e.target) : e;
 	const Links = getLinks();
 
-
-	if(EL) {
+	console.log(target);
+	if(target) {
 		Links.map(v => {
-			if(v === EL.target) {
-				EL.target.classList.add("text-blue-400");
-				for (let i = 0; i < EL.target.classList.length; ++i) {
-					console.log(EL.target.classList[i]);
-				}
-				console.log(EL.target);
+			if(v === target) {
+				v.classList.add("text-blue-400");
+				console.log(v);
 				return;
 			}
+
 			// ...
 			v.classList.remove("text-blue-400");
 		});

@@ -1,5 +1,6 @@
 <script>
-	import { Link} from 'svelte-navigator'
+	
+	import { link as Link } from 'svelte-spa-router'
 	import Fa from 'svelte-fa';
 	import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope, faFaceSmileWink } from '@fortawesome/free-solid-svg-icons';
@@ -29,14 +30,14 @@ on:click={() => { Navigate_(); }}
 <nav class="transition ease-in-out duration-200 {(ShowNav) ? "showFromRight" : "-translate-x-full"} fixed w-screen h-screen top-0 left-0 bg-white text-black flex flex-col justify-center items-center sm:hidden">
 	<ul class="flex flex-col items-center justify-center">
 		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/" >Home</Link>
+			<a use:Link class="text-2xl LINK BTT hover:text-blue-400" href="/" >Home</a>
 		</li>
 		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/about" >About</Link>
+			<a use:Link class="text-2xl LINK BTT hover:text-blue-400" href="/about" >About</a>
 
 		</li>
 		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/contact" >contact</Link>
+			<a use:Link class="text-2xl LINK BTT hover:text-blue-400" href="/contact" >contact</a>
 		</li>
 	</ul>
 	<div class="flex justify-center items-center flex-col my-6">

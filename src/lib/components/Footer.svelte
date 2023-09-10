@@ -1,7 +1,7 @@
 <script>
 	import logo from '../icons/brands/Logo.svg';
 	import Fa from "svelte-fa";
-	import { Link } from 'svelte-navigator';
+	import { link as Link } from 'svelte-spa-router'
 	import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope, faFaceSmileWink } from '@fortawesome/free-solid-svg-icons';
 	import { EffectNavButtons } from "./FuncLib.js";
@@ -15,15 +15,15 @@
 		</li>
 
 	 	<li class="w-full flex justify-start items-center flex-col">
-			<Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 text-white font-normal text-sm" to="/">Home</Link>
+			 <a use:Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 text-white font-normal text-sm" href="/">Home</a>
 		</li>
 
 		<li class="w-full flex justify-start items-center flex-col">
-			<Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 preventDefault text-white font-normal text-sm" to="/about" >About</Link>
+			 <a use:Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 preventDefault text-white font-normal text-sm" href="/about" >About</a>
 
 		</li>
 		<li class="w-full flex justify-start items-center flex-col">
-			<Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 text-sm text-white font-normal" to="/contact" >contact</Link>
+			 <a use:Link on:click={EffectNavButtons} on:keydown={ EffectNavButtons }  class="w-full LINK BTT hover:text-blue-400 text-sm text-white font-normal" href="/contact" >contact</a>
 		</li>
 	 </ul>
 
