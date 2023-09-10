@@ -18,6 +18,7 @@
 		flex items-center justify-between 
 		flex-row text-white 
 		bg-slate-800
+		hover:bg-slate-700
 	">
 		<Fa icon={ faTerminal } size="md" color="white"/>
 	</FancyButton>

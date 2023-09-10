@@ -51,18 +51,23 @@ const Notify = (Text, x, y) => {
 	}, 2000);
 }
 
-const EffectNavButtons = (target) => {
-	const EL = (target.target) ? target.target : target;
-	if(EL){
-		getLinks().map((v) => {
-			if(v === EL) {
-				v.classList.add("text-blue-400");
-			} else if (v.textContent === EL.textContent) {
-				console.log("Matched text.")
-				v.classList.add("text-blue-400");
-			} else {
-				v.classList.remove("text-blue-400");
+const EffectNavButtons = (e) => {
+	const EL    = e.detail;
+	const Links = getLinks();
+
+
+	if(EL) {
+		Links.map(v => {
+			if(v === EL.target) {
+				EL.target.classList.add("text-blue-400");
+				for (let i = 0; i < EL.target.classList.length; ++i) {
+					console.log(EL.target.classList[i]);
+				}
+				console.log(EL.target);
+				return;
 			}
+			// ...
+			v.classList.remove("text-blue-400");
 		});
 	}
 }

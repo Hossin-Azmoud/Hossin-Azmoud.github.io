@@ -15,21 +15,24 @@ print(post(hook, data=data).content)
 	import FancyIn from './MicroComps/FancyInput.svelte';
 	import FancyButton from './MicroComps/FancyButton.svelte';
 	import SectionContainer from './MicroComps/SectionContainer.svelte';
-	import Art from "../images/Illustrations/more/importer_.svelte";
+	import ImageViewer from "../images/Illustrations/more/importer_.svelte"
 	import { onMount } from 'svelte';
 	import { isAnyEmpty, PostToApi } from './FuncLib.js';
 
 	const ERR   = 0;
 	const SUCC  = 1;
 	let webhook = "https://hook.eu2.make.com/1sz7foqcua5vtgq4wtkoicgohvu5wzsp";
+
 	let result = {
 		msg: "",
 		style: ""
 	}
+
 	let Email;
 	let FullName;
 	let Message;
 	let ValidationFields;
+
 	const getValidationField = () => [...document.getElementsByClassName("validator")];
 	const reportError = (i, FieldsArray) => {
 		FieldsArray[i].textContent = "Seems like you left an empty or a wrong length field (requires more than 4 characters).";
@@ -125,11 +128,10 @@ print(post(hook, data=data).content)
 
 		</form>
 
-		<Art 
+		<ImageViewer
 			index="0" 
 			class="hidden sm:block transition" 
 			width="200"
 		/>
-
 	</div>
 </SectionContainer>

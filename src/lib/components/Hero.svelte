@@ -8,22 +8,20 @@
 </script>
 
 <section class="flex-col justify-center sm:flex-row flex sm:justify-between items-center w-full p-1 h-[90vh]">
-	<div class="w-full sm:w-1/2 flex flex-col sm:block justify-center items-center gap-4">
-		<h1 class="text-2xl text-white font-semibold"> 
-		<span class="text-green-300">Front-End</span> developer 
+	<div class="w-full sm:w-1/2 flex flex-col sm:block justify-center items-center">
+		<h1 class="text-2xl text-white font-semibold py-2"> 
+			<span class="text-green-300">Front-End</span> developer 
 		</h1>
-		
-		<p class="text-xl text-white mt-4 font-normal text-center sm:text-left"> 
+		<p class="text-xl text-white font-normal text-center sm:text-left py-2"> 
 			I am into making things look beautiful, interactive, fluid and safe.
 		</p>
-
 		<div class="flex justify-start items-center flex-col sm:flex-row my-3 gap-2">
-			<FancyButton Class="py-3 px-6 text-white text-base bg-green-600">
+			<FancyButton Class="py-3 px-6 text-white text-base hover:bg-green-500 bg-green-600">
 				<a href="/contact" use:Link>
 					Get in touch!
 				</a>
 			</FancyButton>
-			<FancyButton Class="py-3 px-6 gap-4 flex items-center justify-between flex-row text-white bg-slate-800">
+			<FancyButton Class="py-3 px-6 gap-4 flex items-center justify-between flex-row text-white hover:bg-slate-700 bg-slate-800">
 				<a href="/" use:Link class="text-base"> 
 					Resume
 				</a>

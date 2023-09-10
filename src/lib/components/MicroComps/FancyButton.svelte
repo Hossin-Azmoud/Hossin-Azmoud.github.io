@@ -4,7 +4,7 @@
 	export let onclick = () => {};
 </script>
 
-<button on:click={onclick} class="py-2 rounded hover:shadow-lg hover:shadow-blue-600/50 {Class} transition duration-200 " {...$$restProps}>
+<button on:k={onclick} class="py-2 rounded {Class} transition duration-200 " {...$$restProps}>
 	{#if Title}
 		{ Title }
 	{/if}

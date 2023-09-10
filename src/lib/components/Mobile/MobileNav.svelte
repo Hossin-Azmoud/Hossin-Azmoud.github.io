@@ -1,10 +1,9 @@
 <script>
-	import { link as Link} from 'svelte-spa-router'
+	import { Link} from 'svelte-navigator'
 	import Fa from 'svelte-fa';
 	import { faGithub, faTwitter } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope, faFaceSmileWink } from '@fortawesome/free-solid-svg-icons';
 	import { EffectNavButtons } from "../FuncLib.js";
-
 	var ShowNav = false;
 	var LinkButtons;
 	
@@ -18,7 +17,7 @@
 <!-- for Mobile -->
 <button 
 class="flex flex-col justify-between items-center sm:hidden w-8 static z-50"
-on:click={() => {Navigate_();}}
+on:click={() => { Navigate_(); }}
 >	
 	<span class="transition ease-in duration-200 {(ShowNav) ? "bg-black -translate-x-2" : "bg-white translate-x-0"} my-1 h-[2px] w-full"></span>
 	<span class="transition ease-in duration-200 {(ShowNav) ? "bg-black translate-x-2" : "bg-white"} my-1 h-[2px] w-full "></span>
@@ -29,22 +28,20 @@ on:click={() => {Navigate_();}}
 <!-- for Mobile -->
 <nav class="transition ease-in-out duration-200 {(ShowNav) ? "showFromRight" : "-translate-x-full"} fixed w-screen h-screen top-0 left-0 bg-white text-black flex flex-col justify-center items-center sm:hidden">
 	<ul class="flex flex-col items-center justify-center">
-		<li on:click={Navigate_} on:keydown={Navigate_} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<a class="text-2xl LINK BTT hover:text-blue-400" href="/" use:Link>Home</a>
+		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
+			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/" >Home</Link>
 		</li>
-		<li on:click={Navigate_} on:keydown={Navigate_} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<a class="text-2xl LINK BTT hover:text-blue-400" href="/about" use:Link>About</a>
+		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
+			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/about" >About</Link>
 
 		</li>
-		<li on:click={Navigate_} on:keydown={Navigate_} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
-			<a class="text-2xl LINK BTT hover:text-blue-400" href="/contact" use:Link>contact</a>
+		<li on:click={(e) => Navigate_(e)} on:keydown={(e) => Navigate_(e)} group={LinkButtons} class="mx-2 my-4 flex justify-center items-center flex-col">
+			<Link class="text-2xl LINK BTT hover:text-blue-400" to="/contact" >contact</Link>
 		</li>
 	</ul>
-
 	<div class="flex justify-center items-center flex-col my-6">
 		<nav class="flex items-center justify-center">
-	
-			<a class="mx-3 jump" target="blank_" href="https://github.com/Moody0101-X">
+			<a class="mx-3 jump" target="blank_" href="https://github.com/Hossin-Azmoud">
 				<Fa class="rounded shadow-c p-2 bg-blue-900" icon={faGithub} size="3x" color="white"/>
 			</a>
 
@@ -55,9 +52,7 @@ on:click={() => {Navigate_();}}
 			<a class="mx-3 jump" target="blank_" href="https://twitter.com/Moody010111">
 				<Fa class="rounded shadow-c p-2 bg-blue-900" icon={faTwitter} size="3x" color="white"/>
 			</a>
-
 		</nav>	
-
 		<h1 class="mt-6 flex items-center justify-center"> Contact me!!! <Fa icon={faFaceSmileWink} class="mx-4" color="black"/> </h1>
 	</div>
 </nav>
